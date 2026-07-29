@@ -1,6 +1,0 @@
-1. Navigate
-2. First Name
-3. Middle Name
-4. Last Name
-5. Click Save
-6. Employee Saved
