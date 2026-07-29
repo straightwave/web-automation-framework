@@ -1,4 +1,4 @@
-import { LeaveRequest } from "../../pages/Leave/LeaveData";
+import { LeaveRequest } from "../pages/Leave/leave.data";
 
 export class LeaveFactory {
 

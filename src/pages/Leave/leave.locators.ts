@@ -1,42 +1,20 @@
-import { Page } from "@playwright/test";
+export const LeaveLocators = {
 
-export class LeaveLocators {
+    // Navigation
+    leaveMenu: 'a:has-text("Leave")',
+    applyTab: 'a:has-text("Apply")',
+    assignLeaveTab: 'a:has-text("Assign Leave")',
 
-    constructor(private page: Page) {}
+    // Apply Leave
+    employeeNameInput: 'input[placeholder="Type for hints..."]',
+    leaveTypeDropdown: '.oxd-select-text',
+    fromDateInput: 'input[placeholder="yyyy-dd-mm"]',
+    commentsInput: 'textarea',
 
-    get leaveMenu() {
-        return this.page.getByRole('link', { name: 'Leave' });
-    }
+    // Buttons
+    applyButton: 'button:has-text("Apply")',
 
-    get applyTab() {
-        return this.page.getByRole('link', { name: 'Apply' });
-    }
+    // Toast
+    successToast: '.oxd-toast',
 
-    get employeeNameInput() {
-        return this.page.locator("input[placeholder='Type for hints...']");
-    }
-
-    get leaveTypeDropdown() {
-        return this.page.locator(".oxd-select-text").first();
-    }
-
-    get fromDateInput() {
-        return this.page.locator("input[placeholder='yyyy-dd-mm']").first();
-    }
-
-    get toDateInput() {
-        return this.page.locator("input[placeholder='yyyy-dd-mm']").nth(1);
-    }
-
-    get commentsInput() {
-        return this.page.locator("textarea");
-    }
-
-    get applyButton() {
-        return this.page.getByRole('button', { name: 'Apply' });
-    }
-
-    get successToast() {
-        return this.page.locator(".oxd-toast");
-    }
-}
+};

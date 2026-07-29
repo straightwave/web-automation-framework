@@ -1,0 +1,2 @@
+Deleting employee 397
+Employee deleted successfully.
