@@ -3,7 +3,6 @@ import path from 'path';
 import fs from 'fs';
 import { ENV } from './src/config/env';
 
-// Resolve the absolute path to auth state file
 const authStatePath = path.resolve(process.cwd(), ENV.authStatePath);
 
 export default defineConfig({
@@ -36,7 +35,6 @@ export default defineConfig({
 
   projects: [
     
-    // Login Tests (No Storage State)
     {
       name: "login",
 
@@ -45,11 +43,10 @@ export default defineConfig({
       use: {
         browserName: "chromium",
 
-        // set explicit viewport for login tests
         viewport: { width: 1280, height: 720 },
 
         launchOptions: {
-          headless: process.env.HEADLESS === "true",
+         headless: process.env.HEADLESS === "true",
           slowMo: 500,
           args: ["--start-maximized"],
         },
@@ -58,7 +55,6 @@ export default defineConfig({
       },
     },
 
-    // Remaining Tests (Uses Storage State)
     {
       name: 'chromium',
 
@@ -67,7 +63,6 @@ export default defineConfig({
       use: {
         ...devices['Desktop Chrome'],
 
-        // ensure viewport comes from the device descriptor to avoid null/scale issues
         viewport: devices['Desktop Chrome'].viewport,
 
         launchOptions: {

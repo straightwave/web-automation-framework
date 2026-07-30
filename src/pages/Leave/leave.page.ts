@@ -64,7 +64,7 @@ export class LeavePage extends BasePage {
             await this.page.keyboard.press('ArrowDown');
             await this.page.keyboard.press('Enter');
         } catch (e) {
-            // continue
+
         }
 
     }
