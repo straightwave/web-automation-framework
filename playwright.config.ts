@@ -10,11 +10,9 @@ export default defineConfig({
 
   globalSetup: require.resolve('./src/setup/global.setup.ts'),
 
-  fullyParallel: false,
-
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: 1,
+  retries: ENV.retries,
+  workers: ENV.workers,
 
   timeout: ENV.defaultTimeout,
 

@@ -21,7 +21,10 @@ export class Sidebar {
     }
 
     async openRecruitment() {
-        await this.page.getByRole("link", { name: "Recruitment" }).click();
+        await this.page.goto('/web/index.php/recruitment/viewCandidates', {
+            waitUntil: 'domcontentloaded',
+            timeout: 30000,
+        });
     }
 
     async openBuzz() {

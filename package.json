@@ -4,37 +4,36 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
     "ui": "playwright test tests/ui",
     "api": "playwright test tests/api",
-
-    "qa:headed": "cross-env TEST_ENV=qa HEADLESS=false playwright test",
-    "qa:headless": "cross-env TEST_ENV=qa HEADLESS=true playwright test Dashboard.spec.ts",
-
-    "dev:headed": "cross-env TEST_ENV=dev HEADLESS=false playwright test Dashboard.spec.ts",
-    "dev:headless": "cross-env TEST_ENV=dev HEADLESS=true playwright test Dashboard.spec.ts",
     
-    "uat:headed": "cross-env TEST_ENV=uat HEADLESS=false playwright test Dashboard.spec.ts",
-    "uat:headless": "cross-env TEST_ENV=uat HEADLESS=true playwright test Dashboard.spec.ts",
-
-    "prod:headed": "cross-env TEST_ENV=prod HEADLESS=false playwright test Dashboard.spec.ts",
-    "prod:headless": "cross-env TEST_ENV=prod HEADLESS=true playwright test Dashboard.spec.ts",
+    "qa:headed": "cross-env TEST_ENV=qa HEADLESS=false playwright test",
+    "qa:headless": "cross-env TEST_ENV=qa HEADLESS=true playwright test",
+    
+    "dev:headed": "cross-env TEST_ENV=dev HEADLESS=false playwright test",
+    "dev:headless": "cross-env TEST_ENV=dev HEADLESS=true playwright test",
+    
+    "uat:headed": "cross-env TEST_ENV=uat HEADLESS=false playwright test",
+    "uat:headless": "cross-env TEST_ENV=uat HEADLESS=true playwright test",
+    
+    "prod:headed": "cross-env TEST_ENV=prod HEADLESS=false playwright test",
+    "prod:headless": "cross-env TEST_ENV=prod HEADLESS=true playwright test",
     
     "allure:generate": "node scripts/generateAllureReport.js",
     "allure:open": "allure open allure-report",
-
-    "notify:slack":"node scripts/notifySlack.js"
     
+    "notify:slack": "node scripts/notifySlack.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.60.0",
+    "@playwright/test": "^1.59.1",
     "@types/node": "^25.9.3",
     "allure-playwright": "^3.10.0",
     "cross-env": "^10.1.0",
+    "playwright": "^1.59.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },

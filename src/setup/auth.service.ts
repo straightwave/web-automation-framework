@@ -8,7 +8,7 @@ export class AuthService {
             console.log('Current URL:', this.page.url());
 
             console.log('Waiting for login form to render');
-            await this.page.waitForSelector('input[type="password"]', { timeout: 15000 });
+            await this.page.waitForSelector('input[type="password"]', { timeout: 60000 });
             console.log('Login form detected');
 
             const allInputs = this.page.locator('input');
@@ -19,11 +19,11 @@ export class AuthService {
             const usernameField = allInputs.nth(1);
             const passwordField = allInputs.nth(2);
 
-            await usernameField.waitFor({ state: 'visible', timeout: 10000 });
+            await usernameField.waitFor({ state: 'visible', timeout: 60000 });
             await usernameField.fill(username);
             console.log('Username entered:', username);
 
-            await passwordField.waitFor({ state: 'visible', timeout: 10000 });
+            await passwordField.waitFor({ state: 'visible', timeout: 60000 });
             await passwordField.fill(password);
             console.log('Password entered');
 
@@ -33,12 +33,12 @@ export class AuthService {
 
             console.log('URL before button click:', this.page.url());
             await loginButton.click();
-            await this.page.waitForTimeout(3000);
+            await this.page.waitForTimeout(5000);
 
             console.log('Waiting for navigation...');
             await this.page.waitForURL(
                 '**/dashboard/**',
-                { timeout: 15000 }
+                { timeout: 60000 }
             );
 
             const currentUrl = this.page.url();

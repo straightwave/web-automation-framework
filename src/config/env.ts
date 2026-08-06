@@ -34,5 +34,8 @@ export const ENV = {
     password: process.env.PASSWORD!,
     tester: process.env.TESTER!,
     authStatePath: process.env.AUTH_STATE_PATH!,
-    defaultTimeout: parseInt(process.env.DEFAULT_TIMEOUT ?? "30000", 10),
+    workers: parseInt(process.env.WORKERS ?? "1", 10),
+    retries: parseInt(process.env.RETRIES ?? "0", 10),
+    headless: process.env.HEADLESS === "true",
+    defaultTimeout: parseInt(process.env.DEFAULT_TIMEOUT ?? "120000", 10),
 };

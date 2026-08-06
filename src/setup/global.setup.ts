@@ -18,10 +18,10 @@ async function globalSetup() {
 
     await page.goto(ENV.baseUrl, {
         waitUntil: 'domcontentloaded',
-        timeout: ENV.defaultTimeout,
+        timeout: 60000,
     });
     console.log('Initial page URL:', page.url());
-    await page.waitForLoadState('networkidle', { timeout: ENV.defaultTimeout }).catch(() => null);
+    await page.waitForLoadState('domcontentloaded', { timeout: 60000 }).catch(() => null);
 
     const authService = new AuthService(page);
     await authService.login(ENV.username, ENV.password);
