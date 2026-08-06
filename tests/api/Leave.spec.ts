@@ -10,7 +10,7 @@ test("Get Leave Requests", async ({ leaveApi }) => {
         "Leave",
         "Retrieve Leave Requests",
         Severity.CRITICAL,
-        "Usama Zaheer Butt",
+        "Automation Tester",
         ["API", "Smoke"]
 
     );
