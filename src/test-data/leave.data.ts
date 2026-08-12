@@ -1,8 +1,8 @@
 import { LeaveRequest } from "../pages/Leave/leave.data";
 
-export class LeaveFactory {
+export class LeaveDataBuilder {
 
-    static create(): LeaveRequest {
+    static createLeaveRequest(): LeaveRequest {
 
         const now = new Date();
         const dd = String(now.getDate()).padStart(2, '0');
@@ -14,7 +14,7 @@ export class LeaveFactory {
         const toDate = `${yyyy}-${dd}-${mm}`;
 
         return {
-            employeeName: `John Automation ${Date.now()}`,
+            employeeName: 'Odis Adalwin',
             leaveType: 'Vacation',
             fromDate: fromDate,
             toDate: toDate,

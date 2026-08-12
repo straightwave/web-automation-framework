@@ -2,26 +2,31 @@
 # Dependencies
 node_modules/
 
-# Playwright
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
-
-# Allure
-/allure-results/
-/allure-report/
-
-# Auth & local secrets
-/auth/
-/env/.env*
+# Environment and secrets
 .env
 .env.*
 !.env.example
+.env.local
+.env.development
+.env.production
+.env.qa
+.env.staging
+env/.env*
+!env/.env.example
 
-# Generated / local test data (root only — keep src/test-data/)
-/test-data/
+# Auth state and generated local data
+auth/
+**/auth/
+
+# Test artifacts
+playwright-report/
+playwright/.cache/
+blob-report/
+allure-results/
+allure-report/
+test-results/
+trace.zip
+categories.json
 
 # Logs
 *.log
@@ -32,6 +37,6 @@ npm-debug.log*
 Thumbs.db
 
 # IDE
-.idea/
 .vscode/
+.idea/
 *.swp

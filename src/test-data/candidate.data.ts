@@ -1,7 +1,7 @@
 import { CandidateData } from "../pages/Recruitment/candidate.data";
 
-export class CandidateFactory {
-    static create(): CandidateData {
+export class CandidateDataBuilder {
+    static createCandidateData(): CandidateData {
         const timestamp = Date.now();
         const firstName = `Candidate${timestamp}`;
         const middleName = "QA";

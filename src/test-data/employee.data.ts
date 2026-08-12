@@ -1,8 +1,8 @@
 import { EmployeeData } from "../pages/Employee/employee.data";
 
-export class EmployeeFactory {
+export class EmployeeDataBuilder {
 
-    static create(): EmployeeData {
+    static createEmployeeData(): EmployeeData {
 const random = Date.now();
 
 const firstName = `John${random}`;

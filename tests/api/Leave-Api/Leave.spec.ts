@@ -1,5 +1,5 @@
-import { test, expect } from "../../src/fixtures/api.fixture";
-import { AllureHelper } from "../../src/utils/allure/allureHelper";
+import { test, expect } from "../../../src/fixtures/api.fixture";
+import { AllureHelper } from "../../../src/utils/allure/allureHelper";
 import { Severity } from "allure-js-commons";
 
 test("Get Leave Requests", async ({ leaveApi }) => {
@@ -17,8 +17,10 @@ test("Get Leave Requests", async ({ leaveApi }) => {
 
     const response = await leaveApi.getLeaveRequests();
 
-    // parseResponse already asserts response.ok(); just verify response shape
     expect(response).toBeDefined();
+
+   // just an assertion to check if the response is an array
+   
     expect(Array.isArray(response.data)).toBeTruthy();
 
 });

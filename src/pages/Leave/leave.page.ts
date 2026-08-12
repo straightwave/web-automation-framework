@@ -1,5 +1,5 @@
 import { Page, expect } from '@playwright/test';
-import { BasePage } from '../BasePage';
+import { BasePage } from '../../utils/BasePage';
 import { LeaveLocators } from './leave.locators';
 import { LeaveRequest } from './leave.data';
 
@@ -40,6 +40,7 @@ export class LeavePage extends BasePage {
 
         await expect(empInput).toBeVisible({ timeout: 10000 });
         await empInput.fill(employeeName);
+        await this.page.locator(LeaveLocators.employeeSuggestion).first().waitFor({ state: 'visible', timeout: 10000 });
         await empInput.focus();
         await this.page.waitForTimeout(500);
 

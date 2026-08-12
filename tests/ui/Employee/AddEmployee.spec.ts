@@ -1,6 +1,6 @@
 import { test } from "../../../src/fixtures/app.fixture";
 import { EmployeePage } from "../../../src/pages/Employee/employee.page";
-import { EmployeeFactory } from "../../../src/test-data/employee.factory";
+import { EmployeeDataBuilder } from "../../../src/test-data/employee.data";
 import { AllureHelper } from "../../../src/utils/allure/allureHelper";
 import { Severity } from "allure-js-commons";
 
@@ -22,7 +22,7 @@ test.describe("Employee Management", () => {
 
         const employeePage = new EmployeePage(authenticatedPage);
 
-        const employee = EmployeeFactory.create();
+    const employee = EmployeeDataBuilder.createEmployeeData();
 
     let createdEmployee;
 

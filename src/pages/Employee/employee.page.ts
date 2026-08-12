@@ -1,7 +1,7 @@
 import { Page, expect } from '@playwright/test';
 import { EmployeeLocators } from './employee.locators'
-import {BasePage} from '../BasePage'
-import { Sidebar } from '../components/Sidebar';
+import { BasePage } from '../../utils/BasePage'
+import { Sidebar } from '../../components/Sidebar';
 import { EmployeeData } from './employee.data';
 
 
