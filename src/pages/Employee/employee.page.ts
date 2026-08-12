@@ -1,7 +1,7 @@
 import { Page, expect } from '@playwright/test';
 import { EmployeeLocators } from './employee.locators'
-import {BasePage} from '../BasePage'
-import { Sidebar } from '../components/Sidebar';
+import { BasePage } from '../../utils/BasePage'
+import { Sidebar } from '../../components/Sidebar';
 import { EmployeeData } from './employee.data';
 
 
@@ -75,7 +75,6 @@ export class EmployeePage extends BasePage {
 
     }
 
-//navigate
     async openEmployeeList() {
 
     await this.sidebar.openPIM();
@@ -86,8 +85,6 @@ export class EmployeePage extends BasePage {
 
 }
 
-
-//search
 async searchEmployee(employeeName: string) {
 
     await this.page

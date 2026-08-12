@@ -1,20 +1,19 @@
 import { LeaveRequest } from "../pages/Leave/leave.data";
 
-export class LeaveFactory {
+export class LeaveDataBuilder {
 
-    static create(): LeaveRequest {
+    static createLeaveRequest(): LeaveRequest {
 
         const now = new Date();
         const dd = String(now.getDate()).padStart(2, '0');
         const mm = String(now.getMonth() + 1).padStart(2, '0');
         const yyyy = now.getFullYear();
 
-        // OrangeHRM uses a yyyy-dd-mm placeholder in the Apply/Assign forms — format accordingly
         const fromDate = `${yyyy}-${dd}-${mm}`;
         const toDate = `${yyyy}-${dd}-${mm}`;
 
         return {
-            employeeName: `John Automation ${Date.now()}`,
+            employeeName: 'Test Employee',
             leaveType: 'Vacation',
             fromDate: fromDate,
             toDate: toDate,

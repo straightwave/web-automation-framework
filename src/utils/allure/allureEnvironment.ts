@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import os from "os";
 import { ENV } from "../../config/env";
-import { ensureAllureResultsFolder } from "../allureFoldersPresence";
+import { ensureAllureResultsFolder } from "./allureFoldersPresence";
 
 export function createEnvironmentFile() {
 

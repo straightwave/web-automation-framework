@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { ensureAllureResultsFolder } from "../allureFoldersPresence";
+import { ensureAllureResultsFolder } from "./allureFoldersPresence";
 
 export function createCategoriesFile() {
 

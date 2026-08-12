@@ -1,5 +1,5 @@
 import { test } from "../../../src/fixtures/auth.fixture";
-import { EmployeeFactory } from "../../../src/test-data/employee.factory";
+import { EmployeeDataBuilder } from "../../../src/test-data/employee.data";
 import { EmployeePage } from "../../../src/pages/Employee/employee.page";
 
 test.describe("Employee Search", () => {
@@ -8,13 +8,9 @@ test.describe("Employee Search", () => {
 
         const employeePage = new EmployeePage(authenticatedPage);
 
-        const employee = EmployeeFactory.create();
-
-        // Create Employee
+        const employee = EmployeeDataBuilder.createEmployeeData();
 
         await employeePage.addEmployee(employee);
-
-        // Search Employee
 
         await employeePage.openEmployeeList();
 
