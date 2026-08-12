@@ -10,7 +10,7 @@ test("Get Employees", async ({ employeeApi }) => {
         "Employee",
         "Retrieve Employees",
         Severity.CRITICAL,
-        "Test Automation Engineer",
+        "QA Engineer",
         ["API", "Smoke"]
 
     );

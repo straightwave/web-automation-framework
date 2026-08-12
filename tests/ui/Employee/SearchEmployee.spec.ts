@@ -10,11 +10,7 @@ test.describe("Employee Search", () => {
 
         const employee = EmployeeDataBuilder.createEmployeeData();
 
-        // Create Employee
-
         await employeePage.addEmployee(employee);
-
-        // Search Employee
 
         await employeePage.openEmployeeList();
 

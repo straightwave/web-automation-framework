@@ -75,7 +75,6 @@ export class EmployeePage extends BasePage {
 
     }
 
-//navigate
     async openEmployeeList() {
 
     await this.sidebar.openPIM();
@@ -86,8 +85,6 @@ export class EmployeePage extends BasePage {
 
 }
 
-
-//search
 async searchEmployee(employeeName: string) {
 
     await this.page

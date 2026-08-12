@@ -9,7 +9,7 @@ test('Dashboard - Verify logged in state', async ({ authenticatedPage: page }) =
     "Dashboard Verification",
     "Verify authenticated user can access dashboard",
     Severity.CRITICAL,
-    "Test Automation Engineer",
+    "QA Engineer",
     ["Smoke", "Regression"]
   );
 
@@ -17,7 +17,5 @@ test('Dashboard - Verify logged in state', async ({ authenticatedPage: page }) =
 
   await expect(page).toHaveURL(/dashboard/);
   await expect(page).toHaveTitle(/OrangeHRM/);
-  // delibaretly failed the testts
-  // await expect(page).toHaveTitle(/Google/);
 
 });

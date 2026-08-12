@@ -12,7 +12,7 @@ export class UserDataBuilder {
 
             UserRole: "ESS",
 
-            EmployeeName: "Aditya RajSingh",
+            EmployeeName: "Test Employee",
 
             UserName: username,
 

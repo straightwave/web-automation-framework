@@ -19,8 +19,7 @@ test("Get Leave Requests", async ({ leaveApi }) => {
 
     expect(response).toBeDefined();
 
-   // just an assertion to check if the response is an array
-   
+
     expect(Array.isArray(response.data)).toBeTruthy();
 
 });

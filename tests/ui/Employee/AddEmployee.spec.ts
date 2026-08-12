@@ -16,7 +16,7 @@ test.describe("Employee Management", () => {
             "Dashboard Verification",
             "Verify add Employee",
             Severity.CRITICAL,
-            "Automation Engineer",
+      "QA Engineer",
             ["Smoke", "Regression"]
     );
 

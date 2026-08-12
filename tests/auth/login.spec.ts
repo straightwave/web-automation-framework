@@ -13,7 +13,7 @@ test.describe("Authentication", () => {
             "Login",
             "Verify Successful Login",
             Severity.CRITICAL,
-            "Test Automation Engineer",
+            "QA Engineer",
             ["Smoke", "Regression"]
         );
 
